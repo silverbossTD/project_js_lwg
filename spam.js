@@ -1,3 +1,6 @@
+//PLS DON'T USE THIS SHIT
+//IT SUCKS
+
 const spambtn = document.createElement('button');
 const spamtext = document.createTextNode("Spam");
 spambtn.appendChild(spamtext);
