@@ -89,6 +89,9 @@ var builds = [
       },
 ];
 
+buildTitle = builds[0].name;
+buildOrder = builds[0].howto;
+
 var trainButton = document.createElement('button');
 trainButton.id = "trainButton";
 trainButton.style.width = "240px";
