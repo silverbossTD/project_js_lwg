@@ -65,7 +65,7 @@ var languages = [
                   ["scrollLabel", "Включить прокрутку мыши в неполноэкранном режиме<input id='scrollCheckbox' type='checkbox'>"],
                   ["mmLabel", "Инвертировать прокрутку средней кнопкой мыши<input id='mmCheckbox' type='checkbox'>"],
                   ["hpBarsLabel", "Не показывать полоски HP при полном HP<input id='hpBarsCheckbox' type='checkbox'>"],
-                  ["noMainMenuMusicLabel", "Нет меню / музыки в вестибюле<input id='noMainMenuMusicCheckbox' type='checkbox'>"],
+                  ["noMainMenuMusicLabel", "Отключить музыку в меню/лоббиюле<input id='noMainMenuMusicCheckbox' type='checkbox'>"],
                   ["noRainLabel", "Без эффектов дождя<input id='noRainCheckbox' type='checkbox'></p>"]
             ],
             "lobby": [
