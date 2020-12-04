@@ -1,3 +1,18 @@
+//Add new Style to head
+var head;
+function getNewStyle(linkRel, linkHref) {
+    head  = document.getElementsByTagName('head')[0];
+    let link  = document.createElement('link');
+    link.rel  = linkRel;
+    link.href = linkHref;
+    link.media = 'all';
+    head.appendChild(link);
+}
+
+//Add new font
+getNewStyle("preconnect", "https://fonts.gstatic.com");
+getNewStyle("stylesheet", "https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
 var arrFAQ = [];
 $("#faqWindowSubDivTextArea > p").each(function(index, obj) {
     arrFAQ.push(obj.innerHTML);
@@ -10,7 +25,9 @@ var languages = [
             "name": "English",
             "id": 0,
             "size": 36,
+            "fontfamily": "LCDSolid, Verdana, Geneva, Arial, Helvetica, sans-serif",
             "playerGoldWrap": "Get more!",
+            "addfriendbutton": "send new friend request",
             "options": [
                   ["switchQueriesButton", "Don't pop up Messages ingame"],
                   ["hotkeyWindowButton", "Hotkeys"],
@@ -56,7 +73,9 @@ var languages = [
             "name": "Russian",
             "id": 1,
             "size": 20,
+            "fontfamily": "'Russo One', sans-serif",
             "playerGoldWrap": "Получите больше!",
+            "addfriendbutton": "добавить в друзья",
             "options": [
                   ["switchQueriesButton", "Всегда показывать сооб"],
                   ["hotkeyWindowButton", "Горячие клавиши"],
@@ -117,18 +136,22 @@ let htmlfaq;
 function getLanguages(id) {
       changeFAQ(id);
       $("#playerGoldWrap > button")[0].innerText = languages[id].playerGoldWrap;
+      $("#addFriendP > button")[0].innerText = languages[id].addfriendbutton;
       for(let i = 0; i < languages[id].options.length; i++) {
             console.log(id, i);
             document.getElementById(languages[id].options[i][0]).innerHTML = languages[id].options[i][1];
+            document.getElementById(languages[id].options[i][0]).fontFamily = languages[id].fontfamily;
       }
       //lobby
       for(let i = 0; i < languages[id].lobby.length; i++) {
             document.getElementById(languages[id].lobby[i][0]).innerHTML = languages[id].lobby[i][1];
             document.getElementById(languages[id].lobby[i][0]).style.fontSize  = "" + languages[id].size + "px";
+            document.getElementById(languages[id].lobby[i][0]).fontFamily = languages[id].fontfamily;
       }
       //friends
       for(let i = 0; i < languages[id].lobby.length; i++) {
             document.getElementById(languages[id].friends[i][0]).innerHTML = languages[id].friends[i][1];
+            document.getElementById(languages[id].friends[i][0]).fontFamily = languages[id].fontfamily;
       }
 }
 
@@ -136,6 +159,7 @@ function changeFAQ(id) {
       htmlfaq = '';
       htmlfaq = FAQhtml + "<h2 id='basics'>Basics / How to Play</h2><p>" + languages[id].faq[0][1] + "</p><h2 id='fullscreen'>Fullscreen</h2><p>" + languages[id].faq[1][1] + "</p><h2 id='menu_ui'>Menu and UI</h2><p>" + languages[id].faq[2][1] + "</p><h2 id='play'>Play</h2><p>" + languages[id].faq[3][1] + "</p><h2 id='play_vs_cpu'>Play vs CPU</h2><p>" + languages[id].faq[4][1] + "</p><h2 id='ranked_match'>Ranked Match</h2><p>" + languages[id].faq[5][1] + "</p><h2 id='editor'>Editor</h2><p>" + languages[id].faq[6][1] + "</p><h2 id='load_replay'>Load Replay</h2><p>" + languages[id].faq[7][1] + "</p><h2 id='tutorials'>Tutorials</h2><p>" + languages[id].faq[8][1] + "</p><h2 id='custom_ai'>Custom AI</h2><p>" + languages[id].faq[9][1] + "</p><h2 id='littlechatgame'>LittleChatGame</h2><p>" + languages[id].faq[10][1] + "</p><h2 id='aboutme'>The Developers</h2><p>" + languages[id].faq[11][1] + "</p><h2 id='bugs_issues'>Bugs &amp; issues</h2><p>" + languages[id].faq[12][1] + "</p>";
       console.log(htmlfaq);
+      document.getElementById("faqWindowSubDivTextArea").fontFamily = languages[id].fontfamily;
       return htmlfaq;
 }
 
