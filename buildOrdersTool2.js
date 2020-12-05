@@ -38,7 +38,7 @@ var builds = [
       },
       
       {
-            "name": "1 den NorM",
+            "name": "2 den NorM",
             "id" : 1,
             "length": 24,
             "howto": [
@@ -46,8 +46,8 @@ var builds = [
                   [0,10,"Remember to keep training Workers one at a time!"],
                   [0,20, "8/10 House 22 SECOND MARK!! (MAKE HOUSE CLOSE TO GOLD MINE!!)"],
                   [0,30,"Dont Spend Gold On Worker!! SPEND GOLD ON <b>DEN</b>!!"],
-                  [0,35,"8/10 Den (50 second Mark!!) SEND WORKER AT 40 SECOND MARK!! "],
-                  [0,50,"8/10 Den (1:00 Mark!!) build a <b>Den</b>"],
+                  [0,38,"8/10 Den (50 second Mark!!) SEND WORKER AT 40 SECOND MARK!! "],
+                  [0,50,"8/10 Den (1:00 Mark!!) SEND AT 50 SECOND MARK!!"],
                   [1,01,"8/10 build a <b>House</b>"],
                   [1,25,"1ST WOLF STARTS AT 1:30 !!"],
                   [1,35, "Mass Produce Wolf Until Supply Blocked At 30!!"],
