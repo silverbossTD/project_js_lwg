@@ -94,7 +94,7 @@ $('#skirmishWindow').append(trainButton);
 var html = '';
 builds.map((build) => {
       console.log(build.name);
-      html += "<button onclick = 'getBuild(" + build.id + ")'>" + build.name + "</button>";
+      html += "<button onclick = 'getBuild(" + build.id + ")'> style='margin: 5px'" + build.name + "</button>";
       console.log(html);
       return html;
 });
@@ -109,6 +109,7 @@ function getBuild(id) {
       buildOrder = builds[id].howto;
       ticksCounter=0;
       document.getElementById("buildOrderDisplay").innerHTML = buildTitle;
+      buildOrder.sort();
       console.log("Loaded build: " + buildTitle);
 }
 
