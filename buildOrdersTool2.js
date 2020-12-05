@@ -22,7 +22,7 @@ var builds = [
             "id" : 0,
             "length": 12,
             "howto": [
-                  [0,2, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
+                  [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
                   [0,10,"Remember to keep training Workers one at a time!"],
                   [0,17, "@ 100 gold & 9 supply: build a House"],
                   [0,35,"@ house completion: build a Wolf Den"],
@@ -42,7 +42,7 @@ var builds = [
             "id" : 1,
             "length": 24,
             "howto": [
-                  [0,2, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
+                  [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
                   [0,10,"Remember to keep training Workers one at a time!"],
                   [0,20, "8/10 House 22 SECOND MARK!! (MAKE HOUSE CLOSE TO GOLD MINE!!)"],
                   [0,30,"Dont Spend Gold On Worker!! SPEND GOLD ON <b>DEN</b>!!"],
@@ -114,6 +114,7 @@ $('#startButton')[0].onclick = function(){
       startGame(false); 
       if(game_state === 4) {
             document.getElementById("buildOrderDisplay").style.display = "block";
+            buildTitle = "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys";
       }
 };
 
