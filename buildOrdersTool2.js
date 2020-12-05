@@ -21,8 +21,9 @@ console.log("Build order tool loaded.");
 
 var builds = [
       {
-            "name": "1 den expand",
+            "name": "1 den Invincible",
             "id" : 0,
+            "length": 12,
             "howto": [
                   [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
                   [0,10,"Remember to keep training Workers one at a time!"],
@@ -40,51 +41,34 @@ var builds = [
       },
       
       {
-            "name": "2 den rush",
+            "name": "1 den NorM",
             "id" : 1,
+            "length": 24,
             "howto": [
                   [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
                   [0,10,"Remember to keep training Workers one at a time!"],
-                  [0,17, "@ 100 gold & 9 supply: build a House"],
-                  [0,35,"@ house completion: build 2 Wolf Den"],
-                  [1,12,"@ den completion: train 2 Wolves"],
-                  [1,36,"Keep training wolves and micro"],
-                  [1,40,"Win the game."]
-            ],
-      },
-      
-      {
-            "name": "Basic Mech",
-            "id" : 2,
-            "howto": [
-                  [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
-                  [0,10,"Remember to keep training Workers one at a time!"],
-                  [0,17, "@ 100 gold & 9 supply: build a House"],
-                  [0,35,"house completion: build a <b>Workshop</b>"],
-                  [1,12,"@ workshop completion: train a gatling gun"],
-                  [1,36,"build a <b>Castle</b>"],
-                  [1,40,"@ keep training gatling gun"],
-                  [2,18,"build a <b>Mill</b>"],
-                  [2,30,"Mill completion: make a <b>Gyro</b>"],
-                  [2,40,"@ And scout"],
-                  [3,10,"Win the game :)"],
-            ],
-      },
-      
-      {
-            "name": "Basic Rax",
-            "id" : 3,
-            "howto": [
-                  [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
-                  [0,10,"Remember to keep training Workers one at a time!"],
-                  [0,17, "@ 100 gold & 9 supply: build a House"],
-                  [0,35,"house completion: build a <b>Barracks</b>"],
-                  [1,12,"@ rax completion: train a raider"],
-                  [1,36,"then scout with that raider and build a <b>Castle</b>"],
-                  [1,40,"@ keep training archer"],
-                  [2,18,"now build a <b>Barracks</b>"],
-                  [3,30,"you can build a <b>Castle</b> if you want"],
-                  [3,40,"Win the game :)"],
+                  [0,20, "8/10 House 22 SECOND MARK!! (MAKE HOUSE CLOSE TO GOLD MINE!!)"],
+                  [0,30,"Dont Spend Gold On Worker!! SPEND GOLD ON <b>DEN</b>!!"],
+                  [0,35,"8/10 Den (50 second Mark!!) SEND WORKER AT 40 SECOND MARK!! "],
+                  [0,50,"8/10 Den (1:00 Mark!!) build a <b>Den</b>"],
+                  [1,01,"8/10 build a <b>House</b>"],
+                  [1,25,"1ST WOLF STARTS AT 1:30 !!"],
+                  [1,35, "Mass Produce Wolf Until Supply Blocked At 30!!"],
+                  [1,50,"(The Objective Of This Build Is To Apply Pressure, Easy Wins Can Come Of It, The DownSide Is You Are Behind If You Don't Apply The Right Ammount Of Pressure!!)"],
+                  [2,50, "SEND WORKER TO NATURAL EXPASION!! (3:25)!!"],
+                  [3,20, "30/30 Castle (STARTS AT 3:42)"],
+                  [4,10, "(SEND 3 WORKERS TO GOLDMINE AT 4:28!!)"],
+                  [4,50, "30/30 build a House"],
+                  [5,01, "Constant Worker Production"],
+                  [5,10, "(Units Or 3rd Base!!)"],
+                  [5,20, "ONCE YOU GET HERE IT DEPENDS ON HOW THE GAME GOES, AND WHAT TYPE OF UNITS YOUR OPPONET IS MAKING!! "],
+                  [5,35, "IF VS MECH - KEEP HIM ON 2 BASES WHILE YOU MACRO UP AND EXPAND, WATCH OUT FOR CATA DROPS AND MAKE YOUR "],
+                  [5,50, "OWN DROPS!! HARASSING MECH IS KEY TO VICTORY!!"],
+                  [6,01, "IF VS RAX - KEEP RAX PLAYER ON 2 BASE, KEEP MAP PRESSURE, YOUR UNITS ARE MUCH FASTER AND HE SHOULD ALWAYS FEAR A BACKSTAB IF HE MOVES OUT!"],
+                  [6,20, "EXPAND YOURSELF AND MAKE UPGRADES AND DENS!! MAKE SURE YOU KEEP POKING AT HIS ARMY AND IF YOU SEE AN OPPORTUNITY TO SURROUND TAKE IT!!"],
+                  [6,40, "IF VS DEN - THE BETTER MICRO WINS, YOU COULD GET LUCKY WITH YOUR OPPONET FAST EXPANDING AS WELL"],
+                  [7,01, "MOST PART WOLF VS WOLF IS MICRO INTENSIVE!! ONLY EXPAND IF YOUR OPPONET EXPANDED!!"],
+                  [7,30, "WIN THE GAME!!"]
             ],
       },
 ];
