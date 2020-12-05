@@ -13,8 +13,13 @@ myLayer.style.pointerEvents="none",
 myLayer.style.background="rgba(0,0,0,0.5)",
 myLayer.innerHTML="Build Order Tool <br><br> By: Silverboss",
 document.body.appendChild(myLayer);
-var flash=0;window.setInterval(function(){buildOrder[0]&&ticksCounter/20>buildOrder[0][0]*60+buildOrder[0][1]&&(flash=2,
-document.getElementById("buildOrderDisplay").innerHTML="<span>"+buildOrder.shift()[2]+"</span>",
+// var flash=0;window.setInterval(function(){buildOrder[0]&&ticksCounter/20>buildOrder[0][0]*60+buildOrder[0][1]&&(flash=2,
+// document.getElementById("buildOrderDisplay").innerHTML="<span>"+buildOrder.shift()[2]+"</span>",
+// buildOrder[0]&&(document.getElementById("buildOrderDisplay").innerHTML+="<br><span style='color: grey'>"+buildOrder[0][2]+"</span>")),
+// flash>0?(flash--,document.getElementById("buildOrderDisplay").style.background="rgba(0,100,0,0.5)"):document.getElementById("buildOrderDisplay").style.background="rgba(0,0,0,0.5)"},500);
+// console.log("Build order tool loaded.");
+var flash=0;window.setInterval(function(){buildOrder[0]&&ticksCounter/20>buildOrder[0][0]*60+buildOrder[0][1]&&(flash=2, /*console.log(buildOrder[0]), buildOrder.push([buildOrder.shift()[0], buildOrder.shift()[1], buildOrder.shift()[2]]),*/
+document.getElementById("buildOrderDisplay").innerHTML="<span>"+buildOrder.shift()[2]+"</span>", buildOrder.push(buildOrder[0]),
 buildOrder[0]&&(document.getElementById("buildOrderDisplay").innerHTML+="<br><span style='color: grey'>"+buildOrder[0][2]+"</span>")),
 flash>0?(flash--,document.getElementById("buildOrderDisplay").style.background="rgba(0,100,0,0.5)"):document.getElementById("buildOrderDisplay").style.background="rgba(0,0,0,0.5)"},500);
 console.log("Build order tool loaded.");
