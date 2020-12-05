@@ -13,16 +13,8 @@ myLayer.style.pointerEvents="none",
 myLayer.style.background="rgba(0,0,0,0.5)",
 myLayer.innerHTML="Build Order Tool <br><br> By: Silverboss",
 document.body.appendChild(myLayer);
-// var flash=0;window.setInterval(function(){buildOrder[0]&&ticksCounter/20>buildOrder[0][0]*60+buildOrder[0][1]&&(flash=2,
-// document.getElementById("buildOrderDisplay").innerHTML="<span>"+buildOrder.shift()[2]+"</span>",
-// buildOrder[0]&&(document.getElementById("buildOrderDisplay").innerHTML+="<br><span style='color: grey'>"+buildOrder[0][2]+"</span>")),
-// flash>0?(flash--,document.getElementById("buildOrderDisplay").style.background="rgba(0,100,0,0.5)"):document.getElementById("buildOrderDisplay").style.background="rgba(0,0,0,0.5)"},500);
-// console.log("Build order tool loaded.");
-var flash=0;window.setInterval(function(){buildOrder[0]&&ticksCounter/20>buildOrder[0][0]*60+buildOrder[0][1]&&(flash=2, /*console.log(buildOrder[0]), buildOrder.push([buildOrder.shift()[0], buildOrder.shift()[1], buildOrder.shift()[2]]),*/
-document.getElementById("buildOrderDisplay").innerHTML="<span>"+buildOrder.shift()[2]+"</span>", buildOrder.push(buildOrder[0]),
-buildOrder[0]&&(document.getElementById("buildOrderDisplay").innerHTML+="<br><span style='color: grey'>"+buildOrder[0][2]+"</span>")),
-flash>0?(flash--,document.getElementById("buildOrderDisplay").style.background="rgba(0,100,0,0.5)"):document.getElementById("buildOrderDisplay").style.background="rgba(0,0,0,0.5)"},500);
-console.log("Build order tool loaded.");
+
+var flash;
 
 var builds = [
       {
@@ -30,7 +22,7 @@ var builds = [
             "id" : 0,
             "length": 12,
             "howto": [
-                  [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
+                  [0,2, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
                   [0,10,"Remember to keep training Workers one at a time!"],
                   [0,17, "@ 100 gold & 9 supply: build a House"],
                   [0,35,"@ house completion: build a Wolf Den"],
@@ -50,7 +42,7 @@ var builds = [
             "id" : 1,
             "length": 24,
             "howto": [
-                  [0,0, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
+                  [0,2, "@start of game: train Worker<br> Send workers to mine<br>Rally castle to gold mine<br>Set up hotkeys"],
                   [0,10,"Remember to keep training Workers one at a time!"],
                   [0,20, "8/10 House 22 SECOND MARK!! (MAKE HOUSE CLOSE TO GOLD MINE!!)"],
                   [0,30,"Dont Spend Gold On Worker!! SPEND GOLD ON <b>DEN</b>!!"],
@@ -78,9 +70,6 @@ var builds = [
       },
 ];
 
-buildTitle = builds[0].name;
-buildOrder = builds[0].howto;
-
 var trainButton = document.createElement('button');
 trainButton.id = "trainButton";
 trainButton.style.width = "240px";
@@ -94,7 +83,7 @@ $('#skirmishWindow').append(trainButton);
 var html = '';
 builds.map((build) => {
       console.log(build.name);
-      html += "<button onclick = 'getBuild(" + build.id + ")'> style='margin: 5px'" + build.name + "</button>";
+      html += "<button onclick = 'getBuild(" + build.id + ")'>" + build.name + "</button>";
       console.log(html);
       return html;
 });
@@ -103,14 +92,22 @@ trainButton.onclick = function() {
       displayInfoMsg2("<h1>Build Orders</h1>" + html);
 };
 
+buildTitle = builds[0].name;
+buildOrder = builds[0].howto;
+
 function getBuild(id) {
       console.log(id);
       buildTitle = builds[id].name;
       buildOrder = builds[id].howto;
       ticksCounter=0;
-      document.getElementById("buildOrderDisplay").innerHTML = buildTitle;
       buildOrder.sort();
+      document.getElementById("buildOrderDisplay").innerHTML = buildTitle;
       console.log("Loaded build: " + buildTitle);
+      flash=0;window.setInterval(function(){buildOrder[0]&&ticksCounter/20>buildOrder[0][0]*60+buildOrder[0][1]&&(flash=2, /*console.log(buildOrder[0]), buildOrder.push([buildOrder.shift()[0], buildOrder.shift()[1], buildOrder.shift()[2]]),*/
+      document.getElementById("buildOrderDisplay").innerHTML="<span>"+buildOrder.shift()[2]+"</span>", buildOrder.push(buildOrder[0]),
+      buildOrder[0]&&(document.getElementById("buildOrderDisplay").innerHTML+="<br><span style='color: grey'>"+buildOrder[0][2]+"</span>")),
+      flash>0?(flash--,document.getElementById("buildOrderDisplay").style.background="rgba(0,100,0,0.5)"):document.getElementById("buildOrderDisplay").style.background="rgba(0,0,0,0.5)"},500);
+      console.log("Build order tool loaded.");
 }
 
 $('#startButton')[0].onclick = function(){ 
