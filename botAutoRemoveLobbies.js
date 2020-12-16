@@ -26,4 +26,22 @@ function setup() {
     }
 }
 
-setInterval(() => setup(), 1000);
+
+var killLobbies;
+
+const killBtn = document.createElement('button');
+killBtn.innerHTML = "Kill Lobbies";
+
+document.getElementById('playerGoldWrap').appendChild(killBtn);
+
+killBtn.onclick = function() {
+    displayInfoMsg("<button onclick='onKillLobbies()'>Turn On</button><br><button onclick='offKillLobbies()'>Turn Off</button>");
+}   
+
+function onKillLobbies() {
+	killLobbies = setInterval(() => setup(), 2000);
+    }
+
+function offKillLobbies() {
+	clearInterval(killLobbies);
+}
