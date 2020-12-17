@@ -1,3 +1,5 @@
+//Dont't use this shit
+//It sucks
 let lobbies = [];
 let players = [];
 function setup() {
